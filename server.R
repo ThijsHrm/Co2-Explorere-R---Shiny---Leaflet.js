@@ -15,9 +15,9 @@ shinyServer(function(input,output) {
                                               (Country == input$ipCountry | input$ipCountry == "All countries") &
                                               (Concentration == input$ipConcentration | input$ipConcentration == 0) &
                                               (Capturability == input$ipCapturability | input$ipCapturability == 0)
-                                   ) }}
-                 else {{subset(dataframe, Facility %in% input$Search)}
-                 })
+                    ) }}
+                 else {{subset(dataframe, Facility %in% input$Search)}}
+    )
 
   #Map
   output$CO2map <- renderLeaflet({
